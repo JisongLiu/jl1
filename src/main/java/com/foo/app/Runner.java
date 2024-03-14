@@ -46,6 +46,7 @@ public class Runner {
             for (int i = 0; i < keys.size(); i++) {
                 db.put(keys.get(i).getBytes(), values.get(i).getBytes());
             }
+            
             RocksIterator iterator = db.newIterator();
             iterator.seek("2 key".getBytes());
             while (iterator.isValid()) {
