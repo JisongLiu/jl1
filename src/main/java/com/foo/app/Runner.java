@@ -37,6 +37,7 @@ public class Runner {
         options.setCreateIfMissing(true);
         dbDir = new File("/tmp/rocks-db", NAME);
         try {
+            
             Files.createDirectories(dbDir.getParentFile().toPath());
             Files.createDirectories(dbDir.getAbsoluteFile().toPath());
             db = RocksDB.open(options, dbDir.getAbsolutePath());
