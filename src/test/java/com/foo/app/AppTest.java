@@ -1,8 +1,8 @@
 package com.foo.app;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Unit test for simple App.
@@ -15,6 +15,10 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+        Runner runner = new Runner();
+
+//        assertTrue( runner.run() );
+//        assertTrue( runner.crawler(""));
+        assertTrue( runner.crawlerUsingHttpClient());
     }
 }
